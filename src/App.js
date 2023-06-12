@@ -1,5 +1,5 @@
 import './App.css';
-import Animal from './components/Animal';
+// import Animal from './components/Animal';
 import AnimalList from './components/AnimalList';
 
 function App() {
@@ -10,7 +10,6 @@ function App() {
       {/* I want to list a bunch of animals...*/}
       {/*Each animal has name and photo*/}
       <AnimalList></AnimalList>
-      <Animal></Animal>
       
     </section>
   );
