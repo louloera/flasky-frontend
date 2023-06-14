@@ -1,15 +1,34 @@
 import "./AnimalList.css"
 import Animal from "./Animal";
 
-
 const AnimalList = () => {
-    return (<section className="AnimalList">
-        <h2> Animal List</h2>
-        <Animal></Animal>
-        <Animal></Animal>
-        <Animal></Animal>
-        <Animal></Animal>
-        <Animal></Animal>
+    const listOFAnimals = [{
+        name: "Violet", 
+        species: "Pitbull Mix"
+        
+    },
+    {
+        name: "Lou",
+        species: "Que paso"
+    },
+    {
+        name: "Joac",
+        species: "kewf"
+    }]
+
+
+    const renderAnimals = listOFAnimals.map(creature => (
+        <li>
+            <Animal name= {creature.name} species={creature.species}>
+            </Animal>
+        </li>
+    ));
+
+    return (
+        <section className="AnimalList">
+        <ul className="Animal List">
+            {renderAnimals}
+        </ul>
 
     </section>)
 };
